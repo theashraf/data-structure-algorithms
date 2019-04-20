@@ -58,3 +58,29 @@ function isEven(n) {
 }
 
 // console.log(isEven(103));
+
+//https://www.hackerrank.com/challenges/recursive-digit-sum/problem
+function digitsSum(n) {
+  if (n < 10) return parseInt(n);
+
+  let sum = 0;
+
+  while (n > 0) {
+    sum += parseInt(n % 10);
+    n = parseInt(n / 10);
+  }
+
+  return digitsSum(sum);
+}
+
+function superDigit(n, k) {
+  let sum = 0;
+
+  for (let i = 0; i < n.length; ++i) {
+    sum += n[i] - "0";
+  }
+
+  return digitsSum(sum * k);
+}
+
+// console.log(superDigit("89898989898989898989898989898989898989898", 355555));
