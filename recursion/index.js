@@ -84,3 +84,24 @@ function superDigit(n, k) {
 }
 
 // console.log(superDigit("89898989898989898989898989898989898989898", 355555));
+
+// deep clone objects or arrays in javascript
+const deepClone = data => {
+  if (data && Array.isArray(data)) return cloneArr(data);
+  else if (data && typeof data === "object") return cloneObj(data);
+  return data;
+};
+
+const cloneArr = arr => arr.map(item => deepClone(item));
+
+const cloneObj = obj =>
+  Object.keys(obj).reduce((newObj, key) => {
+    newObj[key] = deepClone(obj[key]);
+    return newObj;
+  }, {});
+
+// const arr = [1, 2, 3, [4, 5, [6, [7]]]];
+// let arr2 = deepClone(arr);
+// arr2[3][2][0] = 150;
+
+// console.log(arr, arr2);
