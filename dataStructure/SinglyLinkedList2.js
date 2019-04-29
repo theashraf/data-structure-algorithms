@@ -164,27 +164,27 @@ LinkedList._Node = class {
     return this._next;
   }
 };
-
+module.exports = LinkedList;
 // main
-let linkedList = new LinkedList();
+// let linkedList = new LinkedList();
 
-linkedList.add(5, 0);
-linkedList.add(6, 1);
-linkedList.add(16, 2);
-linkedList.add(10, 3);
-linkedList.add(14, 4);
+// linkedList.add(5, 0);
+// linkedList.add(6, 1);
+// linkedList.add(16, 2);
+// linkedList.add(10, 3);
+// linkedList.add(14, 4);
 
-linkedList.print();
+// linkedList.print();
 
-linkedList.remove(0);
-linkedList.add(120, linkedList.size() - 1);
+// linkedList.remove(0);
+// linkedList.add(120, linkedList.size() - 1);
 
-linkedList.print();
+// linkedList.print();
 
-linkedList.remove(linkedList.size() - 1);
+// linkedList.remove(linkedList.size() - 1);
 
-linkedList.print();
+// linkedList.print();
 
-linkedList.add(500, 2);
+// linkedList.add(500, 2);
 
-linkedList.print();
+// linkedList.print();
