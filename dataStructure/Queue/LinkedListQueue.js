@@ -1,4 +1,4 @@
-const LinkedList = require("./SinglyLinkedList2"); // enhanced LinkedList with addBack in O(1)
+const LinkedList = require("../LinkedList/SinglyLinkedList2"); // enhanced LinkedList with addBack in O(1)
 
 class Queue {
   constructor() {
