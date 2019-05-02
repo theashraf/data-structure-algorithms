@@ -85,7 +85,7 @@ class DoublyLinkedList {
       let prevNode = this._back.getPrev();
       this._back.setPrev(null);
       prevNode.setNext(null);
-      this._back = newNode;
+      this._back = prevNode;
       --this._size;
       return data;
     }
